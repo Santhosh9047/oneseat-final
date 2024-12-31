@@ -59,7 +59,7 @@ const App = () => {
       {/* Refer Modal */}
       <ReferModal show={showReferModal} onClose={handleReferClose} />
       {/* Back to Top Button */}
-      <BackToTopButton />
+      {/* <BackToTopButton /> */}
     </Router>
   );
 };

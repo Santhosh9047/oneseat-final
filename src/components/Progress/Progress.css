@@ -3,12 +3,17 @@
   background-color: #f8f9fa;
   border-radius: 8px;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Step container */
 .step-container {
   flex: 1;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 /* Step styling */
@@ -22,6 +27,9 @@
   font-size: 16px;
   color: #333;
   transition: all 0.3s ease;
+  width: 150px; /* Fixed width for all steps */
+  padding: 10px; /* Padding to ensure text fits well */
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 /* Line connecting the steps */
@@ -48,7 +56,7 @@
 }
 
 /* Responsive design for small screens */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .progress-wrapper {
     flex-direction: column;
     align-items: stretch;
@@ -56,9 +64,18 @@
 
   .line {
     height: 2px; /* Thinner line for small screens */
+    width: 100%; /* Full width for the line */
+    margin: 10px 0; /* Add spacing between lines in vertical layout */
   }
 
   .step-container {
     margin-bottom: 10px; /* Add spacing between steps in vertical layout */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    width: 100%; /* Full width for steps in vertical layout */
+    margin-bottom: 10px; /* Add spacing between steps */
   }
 }
